@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frame Animation</title>
+    <script>
+        window.onload = function () {
+            var count = 0;
+            var image = document.getElementById('image');
+            var frames = ['run_1.jpg','run_2.jpg','run_3.jpg','run_4.jpg'];
+
+            setInterval(function () {
+                image.src = frames[count % frames.length];
+                count = count + 1;
+            }, 1000 / 4);
+        };
+    </script>
+</head>
+<body>
+    <img id="image">
+</body>
+</html>
